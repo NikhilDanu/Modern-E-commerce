@@ -1,0 +1,201 @@
+/* SHOP PAGE */
+
+.shop{
+  padding:40px 5%;
+  background:#f8f9fb;
+  min-height:100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+
+.shop-header{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.shop-header h1{
+  font-size:36px;
+  color:#111;
+  margin-bottom:10px;
+}
+
+.shop-header p{
+  color:#666;
+  font-size:16px;
+}
+
+/* MAIN LAYOUT */
+
+.shop-container{
+  display:grid;
+  grid-template-columns:250px 1fr;
+  gap:30px;
+}
+
+/* FILTER SIDEBAR */
+
+.filter{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  height:fit-content;
+}
+
+.filter h3{
+  margin-bottom:10px;
+  color:#111;
+}
+
+.filter ul{
+  list-style:none;
+  margin-bottom:25px;
+}
+
+.filter li{
+  padding:8px 0;
+  color:#555;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.filter li:hover{
+  color:black;
+  transform:translateX(5px);
+}
+
+/* PRODUCTS GRID */
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(20px,1fr));
+  gap:25px;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+  width:100%;
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+
+.product-img{
+  width:100%;
+  height:220px;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px;
+}
+
+.product-img img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+/* INFO */
+
+.product-info{
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+
+}
+
+.product-info h3{
+  font-size:18px;
+  color:#111;
+}
+
+.product-info p{
+  font-size:14px;
+  color:#666;
+  height:40px;
+  overflow:hidden;
+}
+
+/* BOTTOM */
+
+.product-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:10px;
+}
+
+.price{
+  font-size:18px;
+  font-weight:600;
+  color:#111;
+}
+
+.product-bottom button{
+  background:black;
+  color:white;
+  border:none;
+  padding:8px 14px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.product-bottom button:hover{
+  background:#333;
+}
+
+/* TABLET */
+
+@media (max-width:900px){
+
+  .shop-container{
+    grid-template-columns:1fr;
+  }
+
+  .filter{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+  }
+
+  .filter ul{
+    margin-bottom:10px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width:600px){
+
+  .shop{
+    padding:30px 20px;
+  }
+
+  .shop-header h1{
+    font-size:28px;
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .product-img{
+    height:200px;
+  }
+
+}

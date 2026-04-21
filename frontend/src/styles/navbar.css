@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 60px; /* ✅ navbar space fix */
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  height: 60px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* LINKS */
+.nav-links ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navl {
+  color: white;
+  text-decoration: none;
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* SEARCH */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  background: #111;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* SUGGESTION */
+.search-suggestions {
+  position: absolute;
+  top: 110%;
+  width: 100%;
+  background: #111;
+  border-radius: 6px;
+}
+
+.search-suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search-suggestions li:hover {
+  background: #222;
+}
+
+/* MOBILE ICON */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 🔥 MOBILE MENU FIX */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px; /* navbar ke niche */
+  left: 0;
+  width: 100%;
+  background: #000;
+  flex-direction: column;
+  padding: 10px 0;
+  border-top: 1px solid #222;
+  z-index: 999;
+
+  /* animation */
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+/* ACTIVE */
+.mobile-menu.active {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* LINKS STYLE */
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #111;
+  transition: 0.2s;
+}
+
+.mobile-menu a:hover {
+  background: #111;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+  .nav-links{
+    display:none !important;
+  }
+
+  .search-box{
+    display:none;
+  }
+
+  .menu-icon{
+    display:block;
+  }
+
+}
+
+/* USER SECTION */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout-icon {
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.logout-icon:hover {
+  transform: scale(1.2);
+}
+
+/* MOBILE LOGOUT */
+.mobile-logout {
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-top: 1px solid #111;
+}
+
+.mobile-logout:hover {
+  background: #111;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}

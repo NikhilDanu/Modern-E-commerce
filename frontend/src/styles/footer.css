@@ -1,0 +1,85 @@
+.footer{
+  background:#232f3e;
+  color:white;
+  padding:40px 0 0 0;
+}
+
+.footer-container{
+  width:90%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+
+/* HEADINGS */
+.footer-section h3{
+  margin-bottom:10px;
+  font-size:20px;
+}
+
+.footer-section h4{
+  margin-bottom:15px;
+  font-size:16px;
+}
+
+/* TEXT */
+.footer-section p{
+  font-size:14px;
+  line-height:1.6;
+  color:#ddd;
+}
+
+/* LIST */
+.footer-section ul{
+  list-style:none;
+}
+
+.footer-section ul li{
+  margin-bottom:10px;
+  font-size:14px;
+  cursor:pointer;
+  color:#ccc;
+  transition:0.2s;
+}
+
+.footer-section ul li:hover{
+  color:#febd69;
+  transform:translateX(3px);
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:center;
+  padding:15px;
+  margin-top:30px;
+  background:#131a22;
+  font-size:14px;
+  color:#aaa;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width:768px){
+
+  .footer-container{
+    grid-template-columns:repeat(2,1fr); /* 🔥 2 column */
+    gap:30px;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width:480px){
+
+  .footer-container{
+    grid-template-columns:1fr; /* 🔥 1 column */
+    text-align:center;
+  }
+
+  .footer-section ul li{
+    cursor:default;
+  }
+
+}
